@@ -15,6 +15,16 @@ namespace Pluralsight.Movies.Drivers
             }
         }
 
+        protected override DriverResult Display(MoviePart part, string displayType, dynamic shapeHelper)
+        {
+            //display types: Detail, Summary, Summary_Admin
+            //return content shape result delegate invoked only if shape is placed
+            //here (second param) we can specify any shape but usually its gonna be the same
+            //we give to the content shape method
+            return ContentShape("Parts_Movie", () => shapeHelper.Parts_Movie
+            (MoviePart: part));
+        }
+
         //GET
         //orchard calls this when it loads the form or when save is there is
         //not a corresponding Editor method for such action
