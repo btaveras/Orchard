@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drivers\MoviePartDriver.cs" />
+    <Compile Include="Handlers\MovieFeatureEventHandler.cs" />
     <Compile Include="Handlers\MovieHandler.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\MoviePart.cs" />
@@ -124,6 +125,10 @@
       <Name>Orchard.Core</Name>
       <Private>false</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Taxonomies\Orchard.Taxonomies.csproj">
+      <Project>{E649EA64-D213-461B-87F7-D67035801443}</Project>
+      <Name>Orchard.Taxonomies</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -135,8 +140,8 @@
     <Content Include="Placement.info" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Views\Parts\Movie.cshtml" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Parts\Movie.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

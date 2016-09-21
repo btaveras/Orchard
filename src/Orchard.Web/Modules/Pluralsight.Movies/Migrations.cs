@@ -58,5 +58,22 @@ namespace Pluralsight.Movies
                 builder => builder.WithPart("MoviePart"));
             return 4;
         }
+
+        public int UpdateFrom4(){
+            ContentDefinitionManager.AlterPartDefinition("MoviePart", builder =>
+            builder.WithField("Genre", fld =>
+            fld.OfType("TaxonomyField")
+            .WithSetting("DisplayName", "Genre")
+            //field is tied to genre taxonomy
+            .WithSetting("TaxonomyFieldSettings.Taxonomy", "Genre") 
+            //any term can be selected
+            .WithSetting("TaxonomyFieldSettings.LeavesOnly", "False")
+            //multiple terms can be selected
+            .WithSetting("TaxonomyFieldSettings.SingleChoice", "False")
+
+            .WithSetting("TaxonomyFieldSettings.Hint", "Select as many genres"+
+            "as possible")));
+            return 5;    
+        }
     }
 }

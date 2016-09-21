@@ -8,3 +8,4 @@ Description: Build movies in Orchard
 Features:
     Pluralsight.Movies:
         Description: Feature used to build movies in Orchard
+		Dependencies: Contrib.Taxonomies
