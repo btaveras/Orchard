@@ -1,10 +1,10 @@
 ﻿Name: Pluralsight.Movies
 AntiForgery: enabled
-Author: The Orchard Team
+Author: Brenda Taveras
 Website: http://orchardproject.net
 Version: 1.0
-OrchardVersion: 1.0
-Description: Description for the module
+OrchardVersion: 1.4
+Description: Build movies in Orchard
 Features:
     Pluralsight.Movies:
-        Description: Description for feature Pluralsight.Movies.
+        Description: Feature used to build movies in Orchard
