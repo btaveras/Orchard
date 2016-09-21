@@ -99,6 +99,8 @@
     <Compile Include="Handlers\MovieFeatureEventHandler.cs" />
     <Compile Include="Handlers\MovieHandler.cs" />
     <Compile Include="Migrations.cs" />
+    <Compile Include="Models\ActorRecord.cs" />
+    <Compile Include="Models\MovieActorRecord.cs" />
     <Compile Include="Models\MoviePart.cs" />
     <Compile Include="Models\MoviePartRecord.cs" />
     <Compile Include="Models\MPAARating.cs" />

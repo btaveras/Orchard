@@ -24,5 +24,13 @@ namespace Pluralsight.Movies.Models
             set { Record.Rating = value; }
         }
 
+        //directly access actors on the movie without going through the join record
+        public IEnumerable<ActorRecord> Cast
+        {
+            get
+            {
+                return Record.MovieActors.ToList().Select(c => c.ActorRecord);
+            }
+        }
     }
 }

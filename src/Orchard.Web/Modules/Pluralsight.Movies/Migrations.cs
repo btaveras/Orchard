@@ -75,5 +75,19 @@ namespace Pluralsight.Movies
             "as possible")));
             return 5;    
         }
+
+        public int UpdateFrom5()
+        {
+            SchemaBuilder.CreateTable("ActorRecord", table => table
+            .Column<int>("Id", col => col.PrimaryKey().Identity())
+            .Column<string>("Name"));
+            return 6;
+
+            SchemaBuilder.CreateTable("MovieActorRecord", table => table
+            .Column<int>("Id", col => col.PrimaryKey().Identity())
+            .Column<int>("MoviePartRecord_Id")
+            .Column<int>("ActorRecord_Id"));
+            return 6;
+        }
     }
 }
